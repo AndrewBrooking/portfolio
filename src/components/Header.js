@@ -9,10 +9,15 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Andrew Brooking</h1>
-        <p>
-          A University of Texas certified Full Stack Developer
+        <p style={{marginBottom: 0}}>
+          A University of Texas certified Full Stack Developer.
         </p>
-        
+        <p style={{marginBottom: 0}}>
+          Skilled problem solver proficient in web design and troubleshooting.
+        </p>
+        <p style={{marginBottom: 0}}>
+          Experience with JavaScript, Python, Java, C++, MySQL, and NoSQL.
+        </p>
       </div>
     </div>
     <nav>
@@ -20,10 +25,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('intro')
+              props.onOpenArticle('about')
             }}
           >
-            Intro
+            About
           </button>
         </li>
         <li>
@@ -38,10 +43,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('about')
+              props.onOpenArticle('skills')
             }}
           >
-            About
+            Skills
           </button>
         </li>
         <li>
