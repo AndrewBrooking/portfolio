@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import me from '../images/me.jpg'
 
 class Main extends React.Component {
   render() {
@@ -26,9 +27,21 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">About</h2>
-          <p>
-            {/* TODO: About me section */}
-          </p>
+          <div style={{display: "flex", justifyContent: "space-between"}}>
+            <img src={me} alt="Andrew Brooking" style={{
+              width: "30%",
+              height: "28%",
+              borderRadius: "50%",
+              marginRight: "2rem",
+              marginTop: "auto",
+              marginBottom: "auto"
+            }} />
+            <p style={{width: "70%"}}>
+              Hello! I am Andrew Brooking, a Full-Stack Developer, with a passion for creating new and interesting applications.
+              My experience with front-end and back-end technologies as well as my technical support background provide me with a unique perspective of application development.
+              My ability to create attractive interfaces and successfully troubleshoot bugs stem from my methodical and detail-oriented design process.
+            </p>
+          </div>
           {close}
         </article>
 
@@ -41,6 +54,9 @@ class Main extends React.Component {
         >
           <h2 className="major">Work</h2>
           {/* TODO: Work section */}
+          <p>
+            WIP: Updating content
+          </p>
           {close}
         </article>
 
