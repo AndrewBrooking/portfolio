@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import me from '../images/me.jpg'
+import PropTypes from 'prop-types';
+import React from 'react';
+import Article from './Article.js';
+import me from '../images/me.jpg';
 
 class Main extends React.Component {
   render() {
@@ -19,55 +20,32 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-        <article
-          id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">About</h2>
+        <Article id="about" title="About" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
           <div style={{display: "flex", justifyContent: "space-between"}}>
-            <img src={me} alt="Andrew Brooking" style={{
-              width: "30%",
-              height: "28%",
-              borderRadius: "50%",
-              marginRight: "2rem",
-              marginTop: "auto",
-              marginBottom: "auto"
-            }} />
-            <p style={{width: "70%"}}>
-              Hello! I am Andrew Brooking, a Full-Stack Developer, with a passion for creating new and interesting applications.
-              My experience with front-end and back-end technologies as well as my technical support background provide me with a unique perspective of application development.
-              My ability to create attractive interfaces and successfully troubleshoot bugs stem from my methodical and detail-oriented design process.
+              <img src={me} alt="Andrew Brooking" style={{
+                width: "30%",
+                height: "28%",
+                borderRadius: "50%",
+                marginRight: "2rem",
+                marginTop: "auto",
+                marginBottom: "auto"
+              }} />
+              <p style={{width: "70%"}}>
+                Hello! I am Andrew Brooking, a Full-Stack Developer, with a passion for creating new and interesting applications.
+                My experience with front-end and back-end technologies as well as my technical support background provide me with a unique perspective of application development.
+                My ability to create attractive interfaces and successfully troubleshoot bugs stem from my methodical and detail-oriented design process.
+              </p>
+            </div>
+        </Article>
+
+        <Article id="work" title="Work" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
+            {/* TODO: Work section */}
+            <p>
+              WIP: Updating content
             </p>
-          </div>
-          {close}
-        </article>
+        </Article>
 
-        <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">Work</h2>
-          {/* TODO: Work section */}
-          <p>
-            WIP: Updating content
-          </p>
-          {close}
-        </article>
-
-        <article
-          id="skills"
-          className={`${this.props.article === 'skills' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">Skills</h2>
+        <Article id="skills" title="Skills" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
           <ul
             style={{
               columnCount: "4",
@@ -84,25 +62,25 @@ class Main extends React.Component {
             <li>MySQL</li>
             <li>NoSQL</li>
             <li>MongoDB</li>
+            <li>Firebase</li>
             <li>MVC</li>
             <li>ReactJS</li>
+            <li>Redux</li>
             <li>GatsbyJS</li>
             <li>NodeJS</li>
             <li>ExpressJS</li>
             <li>GraphQL</li>
-            <li>MERN</li>
+            <li>OOP Design</li>
+            <li>jQuery</li>
+            <li>Git</li>
+            <li>RESTful APIs</li>
+            <li>JSON</li>
+            <li>Material UI</li>
+            <li>Bootstrap</li>
           </ul>
-          {close}
-        </article>
+        </Article>
 
-        <article
-          id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">Contact</h2>
+        <Article id="contact" title="Contact" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
           <ul className="icons">
             <li>
               <a
@@ -137,8 +115,7 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          {close}
-        </article>
+        </Article>
       </div>
     )
   }
