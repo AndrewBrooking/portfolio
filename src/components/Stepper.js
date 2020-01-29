@@ -3,36 +3,54 @@ import { MobileStepper, Button } from '@material-ui/core/';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons/';
 import Project from'./Project.js';
 
-const test = [
+const data = [
     {
-        title: "Test Title 1",
-        desc: "Testing. Please ignore. 1"
+        title: "qWiki",
+        desc: "qWiki is a platform that provides a quick and easy way to host your own scalable Wiki. With the Builder Tool, you can easily generate dynamic informative Wikis and publish them for others to read or contribute.",
+        image: "https://raw.githubusercontent.com/ragobash/qwiki/AndrewBrooking-patch-1/client/public/images/qwiki.PNG",
+        github: "https://github.com/ragobash/qwiki",
+        demo: "https://protected-forest-42016.herokuapp.com/"
     },
     {
-        title: "Test Title 2",
-        desc: "Testing. Please ignore. 2"
+        title: "PayMyProject",
+        desc: "Provide a better platform for makers and content creators with more freedom than Patreon allows.",
+        image: "https://raw.githubusercontent.com/AndrewBrooking/Project-2/master/public/pmp.PNG",
+        github: "https://github.com/AndrewBrooking/Project-2",
+        demo: "https://safe-sands-72263.herokuapp.com/"
     },
     {
-        title: "Test Title 3",
-        desc: "Testing. Please ignore. 3"
+        title: "LIRI",
+        desc: "A Node.JS command line application similar to SIRI (Speech Interpretation Recognition Interface), LIRI takes a command and performs an action.",
+        image: "https://raw.githubusercontent.com/AndrewBrooking/LIRI/master/images/liri.gif",
+        github: "https://github.com/AndrewBrooking/LIRI",
+        demo: "#"
     },
     {
-        title: "Test Title 4",
-        desc: "Testing. Please ignore. 4"
+        title: "Get Out",
+        desc: "A date/event planning application to aggregate nearby options for activities.",
+        image: "https://raw.githubusercontent.com/AndrewBrooking/Project-1/master/assets/images/get-out.PNG",
+        github: "https://github.com/AndrewBrooking/Project-1",
+        demo: "https://andrewbrooking.github.io/Project-1"
     },
     {
-        title: "Test Title 5",
-        desc: "Testing. Please ignore. 5"
+        title: "Clicky Game",
+        desc: "A React based memory game. Don't click the same character twice! How high can you score?",
+        image: "https://raw.githubusercontent.com/AndrewBrooking/Clicky-Game-React/master/public/images/clicky-game.PNG",
+        github: "https://github.com/AndrewBrooking/Clicky-Game-React",
+        demo: "https://andrewbrooking.github.io/Clicky-Game-React/"
     },
     {
-        title: "Test Title 6",
-        desc: "Testing. Please ignore. 6"
+        title: "Rock, Paper, Scissors",
+        desc: "Multiplayer game with a live chat feature!",
+        image: "https://raw.githubusercontent.com/AndrewBrooking/Rock-Paper-Scissors/master/assets/images/RPS.PNG",
+        github: "https://github.com/AndrewBrooking/Rock-Paper-Scissors",
+        demo: "https://andrewbrooking.github.io/Rock-Paper-Scissors"
     }
 ];
 
 function Stepper() {
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = test.length;
+    const maxSteps = data.length;
 
     const handleNext = () => {
         setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -44,7 +62,7 @@ function Stepper() {
 
     return (
         <div>
-            <Project {...test[activeStep]} />
+            <Project {...data[activeStep]} />
             <MobileStepper
                 variant="dots"
                 steps={maxSteps}

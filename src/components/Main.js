@@ -41,7 +41,6 @@ class Main extends React.Component {
         </Article>
 
         <Article id="work" title="Work" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
-          {/* TODO */}
           <Stepper />
         </Article>
 
