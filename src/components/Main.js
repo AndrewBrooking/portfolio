@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Article from './Article.js';
+import Stepper from'./Stepper.js';
 import me from '../images/me.jpg';
 
 class Main extends React.Component {
+
   render() {
     let close = (
       <div
@@ -39,10 +41,8 @@ class Main extends React.Component {
         </Article>
 
         <Article id="work" title="Work" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>
-            {/* TODO: Work section */}
-            <p>
-              WIP: Updating content
-            </p>
+          {/* TODO */}
+          <Stepper />
         </Article>
 
         <Article id="skills" title="Skills" article={this.props.article} articleTimeout={this.props.articleTimeout} close={close}>

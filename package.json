@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Andrew Brooking",
   "dependencies": {
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/icons": "^4.5.1",
     "gatsby": "^2.19.5",
     "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-react-helmet": "^3.1.21",
